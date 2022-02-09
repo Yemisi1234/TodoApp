@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Todo App</h2>
+      <div class="row justify-content-center">
+        <div class="col-xs-12">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">🔍</span>
+            </div>
+            <input
+              id="search-input"
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+        </div>
+      </div>
+      <span class="text-muted" id="edit-text"></span>
+      <main>
+        <form id="todo-form">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Todo Text"
+              aria-label="Enter todo Text"
+              autocomplete="off"
+              id="todo-input"
+            />
+            <div class="input-group-append">
+              <button
+                id="todo-btn"
+                class="btn btn-outline-secondary"
+                type="submit"
+              >
+                Add Todo
+              </button>
+            </div>
+          </div>
+        </form>
+        <hr />
+        <ul class="list-group" id="todo-list"></ul>
+      </main>
+    </div>
+    <template id="todo-item">
+      <li class="list-group-item">
+        <p class="lead"></p>
+        <span class="text-muted"></span>
+        <div class="float-right">
+          <button
+            class="btn btn-default btn-xs copy-btn"
+            aria-label="Copy Todo Item"
+          >
+            💾
+          </button>
+          <button
+            class="btn btn-default btn-xs edit-btn"
+            aria-label="Edit Todo Item"
+          >
+            ✏️
+          </button>
+          <button
+            class="btn btn-default btn-xs delete-btn"
+            aria-label="Delete Todo Item"
+          >
+            ❌
+          </button>
+        </div>
+      </li>
+    </template>
+    <script src="index.js"></script>
+  </body>
+</html>
